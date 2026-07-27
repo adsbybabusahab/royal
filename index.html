@@ -261,3 +261,16 @@
         // Reverse Timer Script (23 seconds logic)
         let timeLeft = 23;
         const timerElement = document.getElementById('countdown');
+const timerInterval = setInterval(() => {
+            timeLeft--;
+            if (timeLeft >= 0) {
+                timerElement.textContent = timeLeft;
+            } else {
+                // Timer khatam hone par wapas 23 par reset hoga
+                timeLeft = 23;
+                timerElement.textContent = timeLeft;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
