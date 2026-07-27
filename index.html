@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL TOSS KING™</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1043123038198936');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1043123038198936&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- FontAwesome icons ke liye CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #0f2b38 0%, #03080c 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, #18232c 0%, #0d1318 100%);
+            border-radius: 28px;
+            padding: 35px 25px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8),
+                        0 0 15px rgba(0, 255, 128, 0.15); /* Soft outer glow */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .logo-container {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #333;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .highlight-box {
+            background-color: #e5f000;
+            color: #000000;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .timer-text {
+            color: #aaaaaa;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .timer-text span {
+            color: #00ff88;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .btn-container {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        /* Green glow effect behind the button */
+        .btn-container::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 102%;
+            height: 115%;
+            background: rgba(0, 255, 128, 0.4);
+            filter: blur(12px);
+            border-radius: 18px;
+            z-index: 1;
+        }
+
+        .join-btn {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(180deg, #b83214 0%, #831b04 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 16px 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .telegram-icon {
+            background: #ffffff;
+            color: #831b04;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px dashed #333d45;
+            margin-bottom: 20px;
+        }
+
+        .disclaimer {
+            color: #8a96a0;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* STYLISH ADS BY SECTION */
+        .ads-by {
+            color: #d1d5db;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .ads-by a {
+            color: #00f2fe;
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 2px 6px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        }
+
+        .ads-by a:hover {
+            transform: translateY(-2px) scale(1.05);
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Profile/Logo Image -->
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/9fXhtmZ9/IMG-20260724-130702-791.jpg" alt="ROYAL TOSS KING Logo" id="logoImg">
+        </div>
+
+        <h1>ROYAL TOSS KING™</h1>
+
+        <div class="highlight-box">
+            Accurate analysis • Match Update • Right Pred!ction
+        </div>
+
+        <div class="timer-text">
+            FREE JOINING ENDS IN <span id="countdown">23</span>s
+        </div>
+
+        <!-- Button Section -->
+        <div class="btn-container">
+            <a href="https://t.me/+qjxrmTMSK_tmOGNl" class="join-btn" target="_blank">
+                JOIN TELEGRAM FOR NEW UPDATE
+                <span class="telegram-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </span>
+            </a>
+        </div>
+
+        <hr class="divider">
+
+        <p class="disclaimer">
+            Disclaimer: This channel shares cricket updates, analysis, and general information for fans. It does not promote betting or gambling. No outcomes are guaranteed. Please verify independently and act responsibly.
+        </p>
+
+        <!-- STYLISH & CLICKABLE ADS BY LINK -->
+        <div class="ads-by">
+            Ads by <a href="https://t.me/sahab164" target="_blank">Babu Sahab</a>
+        </div>
+    </div>
+
+    <script>
+        // Reverse Timer Script (23 seconds logic)
+        let timeLeft = 23;
+        const timerElement = document.getElementById('countdown');
+
+        const timerInterval = setInterval(() => {
+            timeLeft--;
+            if (timeLeft >= 0) {
+                timerElement.textContent = timeLeft;
+            } else {
+                // Timer khatam hone par wapas 23 par reset hoga
+                timeLeft = 23;
+                timerElement.textContent = timeLeft;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
