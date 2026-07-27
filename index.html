@@ -50,7 +50,7 @@
             width: 100%;
             text-align: center;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8),
-                        0 0 15px rgba(0, 255, 128, 0.15); /* Soft outer glow */
+                        0 0 15px rgba(0, 255, 128, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
         }
@@ -109,7 +109,7 @@
             margin-bottom: 25px;
         }
 
-        /* Green glow effect behind the button */
+        /* Animated Glowing Effect behind the button */
         .btn-container::after {
             content: '';
             position: absolute;
@@ -118,10 +118,24 @@
             transform: translate(-50%, -50%);
             width: 102%;
             height: 115%;
-            background: rgba(0, 255, 128, 0.4);
-            filter: blur(12px);
+            background: rgba(0, 255, 128, 0.5);
+            filter: blur(14px);
             border-radius: 18px;
             z-index: 1;
+            animation: buttonGlow 2s infinite alternate;
+        }
+
+        @keyframes buttonGlow {
+            0% {
+                opacity: 0.4;
+                filter: blur(10px);
+                transform: translate(-50%, -50%) scale(0.98);
+            }
+            100% {
+                opacity: 0.9;
+                filter: blur(18px);
+                transform: translate(-50%, -50%) scale(1.04);
+            }
         }
 
         .join-btn {
@@ -142,6 +156,11 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            transition: transform 0.2s ease;
+        }
+
+        .join-btn:active {
+            transform: scale(0.97);
         }
 
         .telegram-icon {
@@ -216,7 +235,7 @@
             FREE JOINING ENDS IN <span id="countdown">23</span>s
         </div>
 
-        <!-- Button Section -->
+        <!-- Button Section with Glow Animation -->
         <div class="btn-container">
             <a href="https://t.me/+qjxrmTMSK_tmOGNl" class="join-btn" target="_blank">
                 JOIN TELEGRAM FOR NEW UPDATE
@@ -242,17 +261,3 @@
         // Reverse Timer Script (23 seconds logic)
         let timeLeft = 23;
         const timerElement = document.getElementById('countdown');
-
-        const timerInterval = setInterval(() => {
-            timeLeft--;
-            if (timeLeft >= 0) {
-                timerElement.textContent = timeLeft;
-            } else {
-                // Timer khatam hone par wapas 23 par reset hoga
-                timeLeft = 23;
-                timerElement.textContent = timeLeft;
-            }
-        }, 1000);
-    </script>
-</body>
-</html>
